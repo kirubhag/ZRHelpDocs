@@ -1,0 +1,147 @@
+<section class="content-wrap row ng-scope">
+
+    <section class="lmenu">
+
+        <!--Modal Box Menu-->
+        <section class="menu-header cp fa fa-exclamation-triangle mactive">
+            <strong>Modal Box</strong>
+            <span class=""><i class="fa fa-sort-down"></i></span>
+        </section>
+
+        <section class="menu-children">
+            <ul>
+                <li><a href="javascript:void(0);">Confirm Box</a></li>
+                <li><a href="javascript:void(0);">Browser Confirm Confirm</a></li>
+                <li><a href="javascript:void(0);">Alert Box</a></li>
+                <li><a href="javascript:void(0);">Browser Alert Confirm</a></li>
+                <li><a href="javascript:void(0);">Simple Modal Box</a></li>
+            </ul>
+        </section>
+        <!--Modal Box Menu End-->
+
+        <!--Alert Box Menu-->
+        <section class="menu-header cp fa fa-exclamation-circle">
+            <strong>Alert Box</strong>
+            <span class=""><i class="fa fa-sort-down"></i></span>
+        </section>
+
+        <section class="menu-children dnone">
+            <ul>
+                <li><a href="javascript:void(0);">Strip Alert</a></li>
+                <li><a href="javascript:void(0);">Box Alert</a></li>
+                <li><a href="javascript:void(0);">Modal Alert</a></li>
+            </ul>
+        </section>
+        <!--Alert Box Menu End-->
+
+    </section>
+
+    <section class="rmenu col-md-12 np">
+
+        <!--Component Header Section-->
+        <article class="rmenu-header-wrap">
+            <div class="rmenu-header">
+                <div class="comp-details fl">
+                    <h3 class="m0">Dashboard</h3>
+
+                    <p>This is quick overview of some features.</p></div>
+
+                <div class="comp-menu fr">
+                    <ul>
+                        <li>Overview</li>
+                        <li>Html</li>
+                        <li>CSS</li>
+                        <li>JS</li>
+                    </ul>
+                </div>
+            </div>
+        </article>
+
+
+        <section class="article-des">
+
+            <!--Component Overview Section-->
+            <article class="overview-wrap">
+                <div class="overview">
+                    <div class="overview-head">
+                        <h3 class="m0">About Confirm Box</h3>
+                    </div>
+                    <div class="overview-content">
+                        <p>A confirm box is often used if you want
+                            the user to verify or accept
+                            something.
+                        </p>
+
+                        <p>The <span class="highELE">ZRComponent</span>.<span class="highLT">createConfirmDialog</span>()
+                            method displays a dialog box with a specified message, along with an OK and a Cancel button.
+                        </p></div>
+                </div>
+            </article>
+            <!--Component Overview Section End-->
+
+            <!--Component Html Section-->
+            <article class="overview-wrap mt25">
+                <div class="overview">
+                    <div class="overview-head">
+                        <h3 class="m0">HTML Code</h3>
+                    </div>
+                    <div class="overview-content">
+                        <pre id="htmlOutput" class="html prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-freeze"</span><span class="pln"> </span><span class="atn">data-removefreeze</span><span class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span class="atn">data-removedialog</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> block</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"model-box-wrap zrc-modal-block confirm w400"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"zrc-modal-box-0"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">140.5px</span><span class="pun">;</span><span class="pln"> top</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0)"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"zrc-close-modal"</span><span class="tag">&gt;</span><span class="pln">×</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"til"</span><span class="tag">&gt;</span><span class="pln">Confirm</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"zrc-modal-content"</span><span class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">You are in Simple modal page.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+      </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"zrc-btns-block ar"</span><span class="tag">&gt;&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-primary"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"OK"</span><span class="tag">&gt;&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-secondary marL15"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CANCEL"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+   </span><span class="tag">&lt;/div&gt;</span><span class="pln">
+</span><span class="tag">&lt;/div&gt;</span></pre>
+                    </div>
+                </div>
+            </article>
+            <!--Component Overview Section End-->
+
+
+            <!--Component CSS Section-->
+            <article class="overview-wrap mt25">
+                <div class="overview">
+                    <div class="overview-head">
+                        <h3 class="m0">CSS Code</h3>
+                    </div>
+                    <div class="overview-content">
+                        <p>A confirm box is often used if you want
+                            the user to verify or accept
+                            something.
+                        </p>
+
+                        <p>The <span class="highELE">ZRComponent</span>.<span class="highLT">createConfirmDialog</span>()
+                            method displays a dialog box with a specified message, along with an OK and a Cancel button.
+                        </p></div>
+                </div>
+            </article>
+            <!--Component CSS Section End-->
+
+
+
+            <!--Component JS Section-->
+            <article class="overview-wrap mt25">
+                <div class="overview">
+                    <div class="overview-head">
+                        <h3 class="m0">JS Code</h3>
+                    </div>
+                    <div class="overview-content">
+                        <p>A confirm box is often used if you want
+                            the user to verify or accept
+                            something.
+                        </p>
+
+                        <p>The <span class="highELE">ZRComponent</span>.<span class="highLT">createConfirmDialog</span>()
+                            method displays a dialog box with a specified message, along with an OK and a Cancel button.
+                        </p></div>
+                </div>
+            </article>
+            <!--Component JS Section End-->
+        </section>
+
+    </section>
+</section>

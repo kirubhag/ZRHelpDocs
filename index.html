@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Zoho Recruit Help Docs For Components</title>
+    <link rel="stylesheet" href="css/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="css/font-awesome.css"/>
+    <link rel="stylesheet" href="css/custom/style.css"/>
+    <link rel="stylesheet" href="css/freeformatter.css"/>
+    <link rel="stylesheet" href="css/prettify.css"/>
+</head>
+<body ng-app="ZRHelpDocs">
+
+<section class="container-fluid" ng-controller="FormGenMainCtrl">
+    <section ng-include="'template/Header.html'"></section>
+    <section ng-include="'template/Menu.html'"></section>
+    <section ng-include="'template/Workspace.html'"></section>
+
+    <section ng-view=""></section>
+
+    <section ng-include="'template/Footer.html'"></section>
+</section>
+
+<script src="js/lib/angular/angular.js"></script>
+<script src="js/lib/angular/angular-route.js"></script>
+<script src="js/lib/angular/angular-sanitize.js"></script>
+<script src="js/lib/jquery/jquery-1.11.2.min.js"></script>
+<script src="js/lib/jquery-ui/jquery-ui.js"></script>
+<script src="js/custom/ZRHelpDocs.js"></script>
+</body>
+</html>
