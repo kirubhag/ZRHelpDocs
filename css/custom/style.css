@@ -22,6 +22,10 @@ body {
     padding-left: 10px;
 }
 
+.pt10 {
+    padding-top: 10px;
+}
+
 .pl15 {
     padding-left: 15px;
 }
@@ -142,7 +146,7 @@ body {
 .lmenu {
     padding: 20px;
     color: #b7babc;
-    position: absolute;
+    position: fixed;
     top: 60px;
     left: 0;
     bottom: 0;
@@ -190,6 +194,9 @@ body {
     margin-left: 250px;
     height: 100px;
     box-shadow: 1px 2px 10px 4px #adadad;
+    position: fixed;
+    width: 82%;
+    top: 60px;
 }
 
 .rmenu-header {
@@ -229,6 +236,7 @@ body {
 }
 
 .article-des {
+    margin-top: 160px;
     margin-left: 250px;
     padding: 25px 20px;
 }
@@ -253,5 +261,19 @@ body {
     padding: 10px;
     color: #8a8a8a;
     font-weight: 400;
+}
+
+pre{
+    padding: 0;
+    color: #8a8a8a;
+    margin-bottom: 10px !important;
+}
+
+.attrib>.label{
+     font-size: 100%;
+}
+
+.attrib{
+    margin-top: 20px;
 }
 

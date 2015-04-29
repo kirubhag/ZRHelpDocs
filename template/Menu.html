@@ -72,9 +72,92 @@
                             something.
                         </p>
 
-                        <p>The <span class="highELE">ZRComponent</span>.<span class="highLT">createConfirmDialog</span>()
-                            method displays a dialog box with a specified message, along with an OK and a Cancel button.
-                        </p></div>
+                        <pre id="htmlOutput" class="html prettyprint">The <span class="typ">ZRComponent</span><span
+                                class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                class="pun">()</span> method displays a dialog box with a specified message, along with an OK and a Cancel button.</pre>
+
+                        <p>You can customize this confirmation modal box by providing the values as JS object.</p>
+
+                        <div class="attrib">
+                            <span class="label label-primary">title</span>
+
+                            <p class="pt10">The <strong>title</strong> attribute is used to set the title of the confirm
+                                modal box.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                                    class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                    class="pun">({</span><span class="pln">title</span><span class="pun">:</span><span
+                                    class="str">"My Custom Modal Box"</span><span class="pun">});</span></pre>
+                        </div>
+
+                        <div class="attrib">
+                            <span class="label label-primary">content</span>
+
+                            <p class="pt10">The <strong>content</strong> attribute is used to set the content of the
+                                confirm modal box.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                                    class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                    class="pun">({</span><span class="pln">content</span><span class="pun">:</span><span
+                                    class="str">"This is Custom Modal Box"</span><span class="pun">});</span></pre>
+                        </div>
+
+                        <div class="attrib">
+                            <span class="label label-primary">btnAlignClass</span>
+
+                            <p class="pt10">The <strong>btnAlignClass</strong> attribute is used to align the button
+                                control of the confirm modal box according to the user input.Button allowed alignment
+                                classes are <strong>"al, ac, ar"</strong>.If you are giving irrelevent class name rather
+                                than in the
+                                specified list it will be ignored automatically.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                                    class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                    class="pun">({</span><span class="pln">btnAlignClass</span><span
+                                    class="pun">:</span><span
+                                    class="str">"al"</span><span class="pun">});</span></pre>
+                        </div>
+
+                        <div class="attrib">
+                            <span class="label label-primary">modalClass</span>
+
+                            <p class="pt10">The <strong>modalClass</strong> attribute is used to increase or decrease
+                                the with of the modal box. Allowed width values are <strong>"wid400, wid600, wid700,
+                                    wid800"</strong>.If you are giving irrelevant class name rather than in the
+                                specified list it will be ignored automatically.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                                    class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                    class="pun">({</span><span class="pln">modalClass</span><span
+                                    class="pun">:</span><span
+                                    class="str">"wid400"</span><span class="pun">});</span></pre>
+                        </div>
+
+                        <div class="attrib">
+                            <span class="label label-primary">position</span>
+
+                            <p class="pt10">The <strong>position</strong> attribute is used to place the modal box at
+                                the specified area. Allowed values are <strong>"top", "middle", "bottom",
+                                    "middletop", "middlebottom"</strong>.If you are giving irrelevant class name rather
+                                than in the
+                                specified list it will be ignored automatically.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                                    class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                    class="pun">({</span><span class="pln">position</span><span
+                                    class="pun">:</span><span
+                                    class="str">"middle"</span><span class="pun">});</span></pre>
+                        </div>
+
+                        <div class="attrib">
+                            <span class="label label-primary">removeFreeze</span>
+
+                            <p class="pt10">By default modal box has freeze layer.But it can be removed by the attribute
+                                called <strong>removeFreeze</strong>. The <strong>removeFreeze</strong> attribute ensure that either
+                                freeze layer need to appear or not.It accept boolean value only. If the removeFreeze
+                                value is true then it will remove the freeze layer.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                                    class="pun">.</span><span class="pln">createConfirmDialog</span><span
+                                    class="pun">({</span><span class="pln">removeFreeze</span><span
+                                    class="pun">:</span><span
+                                    class="str">true</span><span class="pun">});</span></pre>
+                        </div>
+                    </div>
                 </div>
             </article>
             <!--Component Overview Section End-->
@@ -86,14 +169,54 @@
                         <h3 class="m0">HTML Code</h3>
                     </div>
                     <div class="overview-content">
-                        <pre id="htmlOutput" class="html prettyprint"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-freeze"</span><span class="pln"> </span><span class="atn">data-removefreeze</span><span class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span class="atn">data-removedialog</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span class="pun">:</span><span class="pln"> block</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
-   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"model-box-wrap zrc-modal-block confirm w400"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"zrc-modal-box-0"</span><span class="pln"> </span><span class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">140.5px</span><span class="pun">;</span><span class="pln"> top</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0px</span><span class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span class="pln">
-      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:void(0)"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"zrc-close-modal"</span><span class="tag">&gt;</span><span class="pln">×</span><span class="tag">&lt;/a&gt;</span><span class="pln">
-      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"til"</span><span class="tag">&gt;</span><span class="pln">Confirm</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
-      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"zrc-modal-content"</span><span class="tag">&gt;</span><span class="pln">
-         </span><span class="tag">&lt;p&gt;</span><span class="pln">You are in Simple modal page.</span><span class="tag">&lt;/p&gt;</span><span class="pln">
+                        <pre id="htmlOutput" class="html prettyprint"><span class="tag">&lt;div</span><span
+                                class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span
+                                class="atv">"modal-freeze"</span><span class="pln"> </span><span class="atn">data-removefreeze</span><span
+                                class="pun">=</span><span class="atv">"false"</span><span class="pln"> </span><span
+                                class="atn">data-removedialog</span><span class="pun">=</span><span
+                                class="atv">"true"</span><span class="pln"> </span><span class="atn">style</span><span
+                                class="pun">=</span><span class="atv">"</span><span class="pln">display</span><span
+                                class="pun">:</span><span class="pln"> block</span><span class="pun">;</span><span
+                                class="atv">"</span><span class="tag">&gt;</span><span class="pln">
+   </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span
+                                class="pun">=</span><span
+                                class="atv">"model-box-wrap zrc-modal-block confirm w400"</span><span
+                                class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span
+                                class="atv">"zrc-modal-box-0"</span><span class="pln"> </span><span
+                                class="atn">style</span><span class="pun">=</span><span class="atv">"</span><span
+                                class="pln">left</span><span class="pun">:</span><span class="pln"> </span><span
+                                class="lit">140.5px</span><span class="pun">;</span><span class="pln"> top</span><span
+                                class="pun">:</span><span class="pln"> </span><span class="lit">0px</span><span
+                                class="pun">;</span><span class="atv">"</span><span class="tag">&gt;</span><span
+                                class="pln">
+      </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span
+                                class="pun">=</span><span class="atv">"javascript:void(0)"</span><span
+                                class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span
+                                class="atv">"zrc-close-modal"</span><span class="tag">&gt;</span><span
+                                class="pln">×</span><span class="tag">&lt;/a&gt;</span><span class="pln">
+      </span><span class="tag">&lt;h2</span><span class="pln"> </span><span class="atn">class</span><span
+                                class="pun">=</span><span class="atv">"til"</span><span class="tag">&gt;</span><span
+                                class="pln">Confirm</span><span class="tag">&lt;/h2&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span
+                                class="pun">=</span><span class="atv">"zrc-modal-content"</span><span
+                                class="tag">&gt;</span><span class="pln">
+         </span><span class="tag">&lt;p&gt;</span><span class="pln">You are in Simple modal page.</span><span
+                                class="tag">&lt;/p&gt;</span><span class="pln">
       </span><span class="tag">&lt;/div&gt;</span><span class="pln">
-      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"zrc-btns-block ar"</span><span class="tag">&gt;&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-primary"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"OK"</span><span class="tag">&gt;&lt;input</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn-secondary marL15"</span><span class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span class="atv">"CANCEL"</span><span class="tag">&gt;&lt;/div&gt;</span><span class="pln">
+      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span
+                                class="pun">=</span><span class="atv">"zrc-btns-block ar"</span><span class="tag">&gt;
+         &lt;input</span><span
+                                class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span
+                                class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span
+                                class="pun">=</span><span class="atv">"btn-primary"</span><span
+                                class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span
+                                class="atv">"OK"</span><span class="tag">&gt;&lt;input</span><span
+                                class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span
+                                class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span
+                                class="pun">=</span><span class="atv">"btn-secondary marL15"</span><span
+                                class="pln"> </span><span class="atn">value</span><span class="pun">=</span><span
+                                class="atv">"CANCEL"</span><span class="tag">&gt;
+      &lt;/div&gt;</span><span class="pln">
    </span><span class="tag">&lt;/div&gt;</span><span class="pln">
 </span><span class="tag">&lt;/div&gt;</span></pre>
                     </div>
@@ -109,18 +232,254 @@
                         <h3 class="m0">CSS Code</h3>
                     </div>
                     <div class="overview-content">
-                        <p>A confirm box is often used if you want
-                            the user to verify or accept
-                            something.
-                        </p>
-
-                        <p>The <span class="highELE">ZRComponent</span>.<span class="highLT">createConfirmDialog</span>()
-                            method displays a dialog box with a specified message, along with an OK and a Cancel button.
-                        </p></div>
+                    <pre id="htmlOutput" class="html prettyprint"><span class="pun">.</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">freeze </span><span
+                            class="pun">{</span><span class="pln">
+position</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">fixed</span><span
+                            class="pun">;</span><span class="pln">
+display</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+cursor</span><span class="pun">:</span><span class="pln"> pointer</span><span class="pun">;</span><span class="pln">
+top</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span
+                            class="pln">
+left</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span class="pun">;</span><span
+                            class="pln">
+bottom</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span
+                            class="pun">;</span><span class="pln">
+right</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span
+                            class="pun">;</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> rgba</span><span class="pun">(</span><span
+                            class="lit">167</span><span class="pun">,</span><span class="pln"> </span><span class="lit">184</span><span
+                            class="pun">,</span><span class="pln"> </span><span class="lit">192</span><span class="pun">,</span><span
+                            class="pln"> </span><span class="lit">0.9</span><span class="pun">);</span><span
+                            class="pln">
+z</span><span class="pun">-</span><span class="pln">index</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">10000</span><span class="pun">;</span><span
+                            class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">block </span><span
+                            class="pun">{</span><span class="pln">
+position</span><span class="pun">:</span><span class="pln"> absolute</span><span class="pun">;</span><span class="pln">
+background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="com">#fff;</span><span class="pln">
+box</span><span class="pun">-</span><span class="pln">shadow</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">3px</span><span
+                            class="pln"> </span><span class="lit">6px</span><span class="pln"> rgba</span><span
+                            class="pun">(</span><span class="lit">0</span><span class="pun">,</span><span
+                            class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span
+                            class="pln"> </span><span class="lit">0</span><span class="pun">,</span><span
+                            class="pln"> </span><span class="lit">0.2</span><span class="pun">);</span><span
+                            class="pln">
+min</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">100px</span><span class="pun">;</span><span
+                            class="pln">
+border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">3px</span><span class="pun">;</span><span class="pln">
+z</span><span class="pun">-</span><span class="pln">index</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">10001</span><span class="pun">;</span><span
+                            class="pln">
+top</span><span class="pun">:</span><span class="pln"> </span><span class="pun">-</span><span
+                            class="lit">200px</span><span class="pun">;</span><span class="pln">
+transition</span><span class="pun">:</span><span class="pln"> all </span><span class="pun">.</span><span
+                            class="lit">8s</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">block h2</span><span
+                            class="pun">.</span><span class="pln">til</span><span class="pun">,</span><span
+                            class="pln"> </span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">block</span><span
+                            class="pun">.</span><span class="pln">confirm h2</span><span class="pun">.</span><span
+                            class="pln">til </span><span class="pun">{</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">18px</span><span class="pun">;</span><span
+                            class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#1e1e1e;</span><span class="pln">
+margin</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span
+                            class="pun">;</span><span class="pln">
+padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">10px</span><span
+                            class="pln"> </span><span class="lit">35px</span><span class="pln"> </span><span
+                            class="lit">10px</span><span class="pln"> </span><span class="lit">15px</span><span
+                            class="pun">;</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span
+                            class="pln"> normal</span><span class="pun">;</span><span class="pln">
+border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">1px</span><span class="pln"> solid </span><span
+                            class="com">#ccc;</span><span class="pln">
+background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="com">#f0f1f3;</span><span class="pln">
+border</span><span class="pun">-</span><span class="pln">top</span><span class="pun">-</span><span
+                            class="pln">right</span><span class="pun">-</span><span class="pln">radius</span><span
+                            class="pun">:</span><span class="pln"> </span><span class="lit">3px</span><span class="pun">;</span><span
+                            class="pln">
+border</span><span class="pun">-</span><span class="pln">top</span><span class="pun">-</span><span
+                            class="pln">left</span><span class="pun">-</span><span class="pln">radius</span><span
+                            class="pun">:</span><span class="pln"> </span><span class="lit">3px</span><span class="pun">;</span><span
+                            class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">block</span><span
+                            class="pun">.</span><span class="pln">confirm h2</span><span class="pun">.</span><span
+                            class="pln">til </span><span class="pun">{</span><span class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#fff;</span><span class="pln">
+background</span><span class="pun">-</span><span class="pln">color</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="com">#342932;</span><span class="pln">
+border</span><span class="pun">-</span><span class="pln">bottom</span><span class="pun">:</span><span
+                            class="pln"> none</span><span class="pun">;</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">16px</span><span class="pun">;</span><span
+                            class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">block</span><span
+                            class="pun">.</span><span class="pln">confirm </span><span class="pun">.</span><span
+                            class="pln">zrc</span><span class="pun">-</span><span class="pln">close</span><span
+                            class="pun">-</span><span class="pln">modal</span><span class="pun">:</span><span
+                            class="pln">hover </span><span class="pun">{</span><span class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#fff;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">close</span><span class="pun">-</span><span class="pln">modal </span><span
+                            class="pun">{</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">22px</span><span class="pun">;</span><span
+                            class="pln">
+top</span><span class="pun">:</span><span class="pln"> </span><span class="lit">6px</span><span
+                            class="pun">;</span><span class="pln">
+right</span><span class="pun">:</span><span class="pln"> </span><span class="lit">12px</span><span
+                            class="pun">;</span><span class="pln">
+position</span><span class="pun">:</span><span class="pln"> absolute</span><span class="pun">;</span><span class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#bcbcbc;</span><span class="pln">
+text</span><span class="pun">-</span><span class="pln">decoration</span><span class="pun">:</span><span class="pln"> none</span><span
+                            class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">close</span><span class="pun">-</span><span class="pln">modal</span><span
+                            class="pun">:</span><span class="pln">hover </span><span class="pun">{</span><span
+                            class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#000;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">block</span><span
+                            class="pun">.</span><span class="pln">confirm </span><span class="pun">.</span><span
+                            class="pln">zrc</span><span class="pun">-</span><span class="pln">close</span><span
+                            class="pun">-</span><span class="pln">modal</span><span class="pun">:</span><span
+                            class="pln">hover </span><span class="pun">{</span><span class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#fff;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">content </span><span
+                            class="pun">{</span><span class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#000;</span><span class="pln">
+padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">15px</span><span
+                            class="pun">;</span><span class="pln">
+max</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">400px</span><span class="pun">;</span><span
+                            class="pln">
+overflow</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">auto</span><span
+                            class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">modal</span><span class="pun">-</span><span class="pln">content p </span><span
+                            class="pun">{</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">13px</span><span class="pun">;</span><span
+                            class="pln">
+line</span><span class="pun">-</span><span class="pln">height</span><span class="pun">:</span><span class="pln"> </span><span
+                            class="lit">150</span><span class="pun">%;</span><span class="pln">
+margin</span><span class="pun">:</span><span class="pln"> </span><span class="lit">0</span><span
+                            class="pln"> </span><span class="lit">0</span><span class="pln"> </span><span class="lit">10px</span><span
+                            class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">btns</span><span class="pun">-</span><span class="pln">block </span><span
+                            class="pun">{</span><span class="pln">
+text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span
+                            class="pln"> right</span><span class="pun">;</span><span class="pln">
+padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">15px</span><span
+                            class="pun">;</span><span class="pln">
+border</span><span class="pun">-</span><span class="pln">top</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">1px</span><span class="pln"> solid </span><span
+                            class="com">#e8e8e8;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">btns</span><span class="pun">-</span><span class="pln">block</span><span
+                            class="pun">.</span><span class="pln">ac </span><span class="pun">{</span><span class="pln">
+text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span
+                            class="pln"> center</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">zrc</span><span class="pun">-</span><span
+                            class="pln">btns</span><span class="pun">-</span><span class="pln">block</span><span
+                            class="pun">.</span><span class="pln">al </span><span class="pun">{</span><span class="pln">
+text</span><span class="pun">-</span><span class="pln">align</span><span class="pun">:</span><span
+                            class="pln"> left</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">primary</span><span class="pun">,</span><span class="pln"> </span><span
+                            class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">secondary</span><span
+                            class="pun">,</span><span class="pln"> </span><span class="pun">.</span><span class="pln">btn</span><span
+                            class="pun">-</span><span class="pln">positive</span><span class="pun">,</span><span
+                            class="pln"> </span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">negative </span><span class="pun">{</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">size</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">13px</span><span class="pun">;</span><span
+                            class="pln">
+border</span><span class="pun">:</span><span class="pln"> none</span><span class="pun">;</span><span class="pln">
+border</span><span class="pun">-</span><span class="pln">radius</span><span class="pun">:</span><span
+                            class="pln"> </span><span class="lit">3px</span><span class="pun">;</span><span class="pln">
+color</span><span class="pun">:</span><span class="pln"> </span><span class="com">#fff;</span><span class="pln">
+cursor</span><span class="pun">:</span><span class="pln"> pointer</span><span class="pun">;</span><span class="pln">
+display</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">inline</span><span
+                            class="pun">-</span><span class="pln">block</span><span class="pun">;</span><span
+                            class="pln">
+padding</span><span class="pun">:</span><span class="pln"> </span><span class="lit">7px</span><span class="pln"> </span><span
+                            class="lit">12px</span><span class="pun">;</span><span class="pln">
+text</span><span class="pun">-</span><span class="pln">decoration</span><span class="pun">:</span><span class="pln"> none</span><span
+                            class="pun">;</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">family</span><span class="pun">:</span><span class="pln"> </span><span
+                            class="str">'Open Sans'</span><span class="pun">;</span><span class="pln">
+font</span><span class="pun">-</span><span class="pln">weight</span><span class="pun">:</span><span
+                            class="pln"> normal</span><span class="pun">;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">primary </span><span
+                            class="pun">{</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#7cb0d9;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">primary</span><span class="pun">:</span><span class="pln">hover </span><span
+                            class="pun">{</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#5895c5;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">secondary </span><span class="pun">{</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#b1b1b1;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">secondary</span><span class="pun">:</span><span class="pln">hover </span><span
+                            class="pun">{</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#969696;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">positive </span><span class="pun">{</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#3abd71;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">positive</span><span
+                            class="pun">:</span><span class="pln">hover </span><span class="pun">{</span><span
+                            class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#2daa62;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span
+                            class="pln">negative </span><span class="pun">{</span><span class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#d94b39;</span><span class="pln">
+</span><span class="pun">}</span><span class="pln">
+</span><span class="pun">.</span><span class="pln">btn</span><span class="pun">-</span><span class="pln">negative</span><span
+                            class="pun">:</span><span class="pln">hover </span><span class="pun">{</span><span
+                            class="pln">
+background</span><span class="pun">:</span><span class="pln"> </span><span class="com">#ca3b28;</span><span class="pln">
+</span><span class="pun">}</span></pre>
+                    </div>
                 </div>
             </article>
             <!--Component CSS Section End-->
-
 
 
             <!--Component JS Section-->
