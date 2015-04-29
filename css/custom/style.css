@@ -143,6 +143,15 @@ body {
     z-index: 1;
 }
 
+.logo {
+    background: url("../../images/logo-recruit.png") no-repeat;
+    cursor: pointer;
+    height: 27px;
+    margin-left: 0;
+    width: 150px;
+    margin: 15px 50px;
+}
+
 .lmenu {
     padding: 20px;
     color: #b7babc;
