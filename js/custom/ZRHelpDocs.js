@@ -7,13 +7,15 @@
  * File Name: ZRHelpDocs
  */
 
-
-
 var ZRHelpDocs = angular.module("ZRHelpDocs", ["ngRoute", "ngSanitize"]);
 
 ZRHelpDocs.server = {};
 
 ZRHelpDocs.serverConfig = {
+    mine: {
+        host: "http://localhost",
+        port: "8888"
+    },
     local: {
         host: "http://192.168.237.223",
         port: "8888"
@@ -24,7 +26,7 @@ ZRHelpDocs.serverConfig = {
     }
 };
 
-ZRHelpDocs.server.local = "local";
+ZRHelpDocs.server.local = "mine";
 
 ZRHelpDocs.getMyHost = function () {
 
@@ -37,7 +39,7 @@ ZRHelpDocs.getMyHost = function () {
             config = ZRHelpDocs.serverConfig.dev;
             break;
         default:
-            config = ZRHelpDocs.serverConfig.local;
+            config = ZRHelpDocs.serverConfig.mine;
             break;
     }
 
@@ -51,6 +53,7 @@ ZRHelpDocs.getBasePath = function () {
     return ZRHelpDocs.getMyHost() + "/ZRHelpDocs/#/";
 };
 
+/*Routing is handled here*/
 ZRHelpDocs.config(function ($routeProvider) {
 
     $routeProvider
@@ -60,10 +63,20 @@ ZRHelpDocs.config(function ($routeProvider) {
         }).when("/modal-box/confirm", {
             templateUrl: "template/Confirm.html",
             controller: "FormGenMainCtrl"
+        }).when("/modal-box", {
+            templateUrl: "template/Modal-box.html",
+            controller: "FormGenMainCtrl"
+        }).when("/alert-box", {
+            templateUrl: "template/Alert-box.html",
+            controller: "FormGenMainCtrl"
         });
 
 
 });
+
+ZRHelpDocs.changeHash = function (hash) {
+    window.location.hash = (hash) ? "#/" + hash : window.location.hash
+};
 
 ZRHelpDocs.directive('ngEnter', function () {
     return function (scope, element, attrs) {
@@ -84,28 +97,47 @@ ZRHelpDocs.controller("FormGenMainCtrl", ["$scope", "$location", "$log", "$http"
     $('.logo').on('click', function () {
         window.location.href = ZRHelpDocs.getBasePath();
     });
-}]);
 
-$('body').on('click', function (event) {
+    var ZRHelp = {};
 
-    /*Left Menu Header Animation*/
-    if ($(event.target).hasClass('fa-sort-up') || $(event.target).hasClass('fa-sort-down') || $(event.target).hasClass('menu-header')) {
+    ZRHelp.AnimationDuration = 600;
 
-        $('.menu-children').slideUp();
+    /*This will place the content at the middle of the screen*/
+    ZRHelp.makeItMiddle = function (element, sw, sh) {
+        var h = $(element).height();
+        var w = $(element).width();
+        var top = (( sh / 2) - (h / 2)) + 'px';//NO I18N
+        var left = ((sw / 2) - (w / 2)) + 'px';//NO I18N
+        $(element).css({top: top, left: left}).fadeIn('slow');
+    };
 
-        if (!$(event.target).hasClass('mactive')) {
-            if ($(event.target).hasClass('menu-header')) {
-                $(event.target).addClass('mactive');
-                $($(event.target)).next().slideDown();
+
+    ZRHelp.init = function () {
+
+        $('.menu-header').on('click', function () {
+            if (!$(this).hasClass('mactive')) {
+                $('.mactive').next().slideUp();
+                $('.mactive').removeClass('mactive');
+
+                $(this).next().slideDown();
+                $(this).addClass('mactive');
+                ZRHelpDocs.changeHash($(this).data('hashval'));
             } else {
-                $($(event.target)).parent().next().slideDown();
+                ZRHelpDocs.changeHash($(this).data('hashval'));
             }
-        }
+        });
 
-    }
-});
+        $('.gallery-wrap').on('mouseover', function () {
+            ZRHelp.makeItMiddle($(this).find('h4'), $(this).width(), $(this).height());
+            $(this).find('.bg-trans').stop().animate({top: 0}, ZRHelp.AnimationDuration);
+        });
 
-$('.fa-sort-up,.fa-sort-down,.menu-header').on('click', function () {
-    console.log("Test");
-    $(this).parent().next();
-});
+        $('.gallery-wrap').on('mouseout', function () {
+            ZRHelp.makeItMiddle($(this).find('h4'), $(this).width(), $(this).height());
+            $(this).find('.bg-trans').stop().animate({top: "-400"}, ZRHelp.AnimationDuration);
+            $(this).find('h4').fadeOut('slow');
+        });
+    };
+
+    ZRHelp.init();
+}]);

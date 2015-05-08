@@ -140,7 +140,7 @@ body {
     line-height: 60px;
     position: fixed;
     width: 100%;
-    z-index: 1;
+    z-index: 2;
 }
 
 .logo {
@@ -153,7 +153,6 @@ body {
 }
 
 .lmenu {
-    padding: 20px;
     color: #b7babc;
     position: fixed;
     top: 60px;
@@ -162,13 +161,17 @@ body {
     width: 250px;
     background: #3d464d;
     border-right: 1px solid #464f55;
-    z-index: 1;
+    z-index: 2;
 }
 
 .menu-header {
     width: 100%;
     font-size: 18px;
-    padding: 10px 0;
+    padding: 20px;
+}
+
+.menu-header:hover, .mactive {
+    background: #363E45;
 }
 
 .menu-header strong {
@@ -178,6 +181,10 @@ body {
 
 .menu-header span i {
     float: right;
+}
+
+.menu-children {
+    padding-left: 17px;
 }
 
 .menu-children ul {
@@ -206,6 +213,7 @@ body {
     position: fixed;
     width: 82%;
     top: 60px;
+    z-index: 1;
 }
 
 .rmenu-header {
@@ -251,7 +259,7 @@ body {
 }
 
 .overview {
-    box-shadow: 0 1px 1px rgba(0,0,0,0.15),-1px 0 0 rgba(0,0,0,0.03),1px 0 0 rgba(0,0,0,0.03),0 1px 0 rgba(0,0,0,0.12);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15), -1px 0 0 rgba(0, 0, 0, 0.03), 1px 0 0 rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.12);
 }
 
 .overview-head {
@@ -272,17 +280,58 @@ body {
     font-weight: 400;
 }
 
-pre{
+.overview-content h4 {
+    color: #399bff;
+    margin: 15px 0;
+}
+
+ul.dep-list {
+    list-style: circle !important;
+}
+
+pre {
     padding: 0;
     color: #8a8a8a;
     margin-bottom: 10px !important;
 }
 
-.attrib>.label{
-     font-size: 100%;
+.attrib > .label {
+    font-size: 100%;
 }
 
-.attrib{
+.attrib {
     margin-top: 20px;
 }
 
+.gallery-wrap {
+    position: relative;
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 35px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.gallery-wrap h4 {
+    position: absolute;
+    display: none;
+    color: #399bff;
+}
+
+.bg-trans {
+    background: #c7ecff;
+    height: 364px;
+    position: absolute;
+    width: 400px;
+    opacity: .8;
+    top: -400px;
+}
+
+.wid400 {
+    width: 400px;
+}
+
+.modal-big {
+    width: 400px;
+    cursor: pointer;
+}

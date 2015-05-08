@@ -1,0 +1,442 @@
+/* $Id$ */
+
+/**
+ * Created by WebStorm.
+ * User: kirubha-2911
+ * Date: 3/16/15
+ * Time: 2:47 PM
+ * Project: webapps
+ * File Name: ZRComponent.css
+ */
+
+/*Modal-Box CSS Goes Here*/
+
+.modal-freeze {
+    position: fixed;
+    display: none;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: rgba(167, 184, 192, 0.9);
+    z-index: 10000;
+}
+
+.zrc-freeze {
+    background: none repeat scroll 0 0 rgba(167, 184, 192, 0.9);
+    left: 0;
+    min-height: 100%;
+    min-width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 10000;
+}
+
+.zrc-modal-block {
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    min-height: 100px;
+    border-radius: 3px;
+    z-index: 10001;
+    top: -200px;
+    transition: all .8s;
+}
+
+.zrc-modal-block h2.til, .zrc-modal-block.confirm h2.til {
+    font-size: 18px;
+    color: #1e1e1e;
+    margin: 0;
+    padding: 10px 35px 10px 15px;
+    font-weight: normal;
+    border-bottom: 1px solid #ccc;
+    background-color: #f0f1f3;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.zrc-modal-block.confirm h2.til {
+    color: #fff;
+    background-color: #342932;
+    border-bottom: none;
+    font-size: 16px;
+}
+
+.zrc-modal-block h2.til span {
+    display: block;
+    line-height: 15px;
+    color: #888;
+    font-weight: normal;
+    font-size: 12px;
+}
+
+.zrc-modal-block h2.til.msg {
+    text-align: center;
+    border-bottom: none;
+    font-size: 18px;
+    padding: 0 0 10px;
+}
+
+.zrc-modal-content {
+    color: #000;
+    padding: 15px;
+    max-height: 400px;
+    overflow: auto;
+
+}
+
+.zrc-modal-content p {
+    font-size: 13px;
+    line-height: 150%;
+    margin: 0 0 10px;
+}
+
+.zrc-btns-block {
+    text-align: right;
+    padding: 15px;
+    border-top: 1px solid #e8e8e8;
+}
+
+.zrc-btns-block.ac {
+    text-align: center;
+}
+
+.zrc-btns-block.al {
+    text-align: left;
+}
+
+.zrc-close-modal {
+    font-size: 22px;
+    top: 6px;
+    right: 12px;
+    position: absolute;
+    color: #bcbcbc;
+    text-decoration: none;
+}
+
+.zrc-close-modal:hover {
+    color: #000;
+}
+
+.zrc-modal-block.confirm .zrc-close-modal:hover {
+    color: #fff;
+}
+
+.btn-primary, .btn-secondary, .btn-positive, .btn-negative {
+    font-size: 13px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    padding: 7px 12px;
+    text-decoration: none;
+    font-family: 'Open Sans';
+    font-weight: normal;
+}
+
+.btn-primary {
+    background: #7cb0d9;
+}
+
+.btn-primary:hover {
+    background: #5895c5;
+}
+
+.btn-secondary {
+    background: #b1b1b1;
+}
+
+.btn-secondary:hover {
+    background: #969696;
+}
+
+.btn-positive {
+    background: #3abd71;
+}
+
+.btn-positive:hover {
+    background: #2daa62;
+}
+
+.btn-negative {
+    background: #d94b39;
+}
+
+.btn-negative:hover {
+    background: #ca3b28;
+}
+
+.cp {
+    cursor: pointer !important;
+}
+
+/*Css For Alert Component*/
+
+.alt-success, .alt-normal, .alt-info, .alt-warning, .alt-failure {
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 20px;
+
+    padding: 15px;
+    position: relative;
+    font-size: 13px;
+}
+
+.alt-cls {
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    right: 10px;
+    text-decoration: none;
+    text-shadow: 0 1px 0 #fff;
+    top: 12px;
+    font-weight: bold;
+}
+
+.alt-cls:hover {
+    color: #666;
+}
+
+.alt-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d;
+}
+
+.alt-normal {
+    background-color: #f6f6f6;
+    border-color: #eaeaea;
+    color: #666;
+}
+
+.alt-info {
+    background-color: #d6f1fb;
+    border-color: #cae0e8;
+    color: #1487b5;
+}
+
+.alt-warning {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #8a6d3b;
+}
+
+.alt-failure {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #a94442;
+}
+
+.alt-success.box, .alt-normal.box, .alt-info.box, .alt-warning.box, .alt-failure.box {
+    border: 1px solid;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px 25px 15px 10px;
+    position: relative;
+    font-size: 13px;
+    width: 400px;
+    min-height: 40px;
+    float: left;
+    margin-right: 20px;
+}
+
+.alt-success.box i, .alt-normal.box i, .alt-info.box i, .alt-warning.box i, .alt-failure.box i {
+    font-size: 50px;
+    float: left;
+    display: block;
+    margin: 0 5px 0 0;
+
+}
+
+.alt-success.box b, .alt-normal.box b, .alt-info.box b, .alt-warning.box b, .alt-failure.box b {
+    font-size: 18px;
+    font-weight: normal;
+    display: block;
+}
+
+.alt-success.box {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #83a683;
+}
+
+.alt-success.box b, .alt-success.box i {
+    color: #3c763d
+}
+
+.alt-normal.box {
+    background-color: #f6f6f6;
+    border-color: #eaeaea;
+    color: #a8a8a8;
+}
+
+.alt-normal.box b, .alt-normal.box i {
+    color: #666
+}
+
+.alt-info.box {
+    background-color: #d6f1fb;
+    border-color: #cae0e8;
+    color: #62b1d0;
+}
+
+.alt-info.box b, .alt-info.box i {
+    color: #1487b5;
+}
+
+.alt-warning.box {
+    background-color: #fcf8e3;
+    border-color: #faebcc;
+    color: #ac9876;
+}
+
+.alt-warning.box b, .alt-warning.box i {
+    color: #8a6d3b;
+}
+
+.alt-failure.box {
+    background-color: #f2dede;
+    border-color: #ebccd1;
+    color: #b97473;
+}
+
+.alt-failure.box b, .alt-failure.box i {
+    color: #a94442;
+}
+
+.alt-success.boxp, .alt-normal.boxp, .alt-info.boxp, .alt-warning.boxp, .alt-failure.boxp {
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 15px 25px 15px 10px;
+    position: relative;
+    font-size: 13px;
+    width: 300px;
+    min-height: 130px;
+    float: left;
+    margin-right: 20px;
+    text-align: center;
+    box-shadow: 0 0 5px #ccc;
+    border: none;
+    background: #fff;
+}
+
+.alt-success.boxp i, .alt-normal.boxp i, .alt-info.boxp i, .alt-warning.boxp i, .alt-failure.boxp i {
+    font-size: 100px;
+    left: 120px;
+    position: absolute;
+    top: -40px;
+    background: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50px;
+    line-height: 80px;
+
+}
+
+.alt-success.boxp b, .alt-normal.boxp b, .alt-info.boxp b, .alt-warning.boxp b, .alt-failure.boxp b {
+    font-size: 22px;
+    display: block;
+    margin: 50px 0 10px;
+}
+
+.alt-normal.boxp b {
+    margin: 20px 0 10px;
+}
+
+.alt-success.boxp {
+    color: #83a683;
+}
+
+.alt-success.boxp b, .alt-success.boxp i {
+    color: #3c763d
+}
+
+.alt-normal.boxp {
+    color: #a8a8a8;
+}
+
+.alt-normal.boxp b, .alt-normal.boxp i {
+    color: #666
+}
+
+.alt-info.boxp {
+    color: #62b1d0;
+}
+
+.alt-info.boxp b, .alt-info.boxp i {
+    color: #1487b5;
+}
+
+.alt-warning.boxp {
+    color: #ac9876;
+}
+
+.alt-warning.boxp b, .alt-warning.boxp i {
+    color: #8a6d3b;
+}
+
+.alt-warning.boxp i {
+    background: none;
+    font-size: 90px;
+    top: -40px;
+}
+
+.alt-failure.boxp {
+    color: #b97473;
+}
+
+.alt-failure.boxp b, .alt-failure.boxp i {
+    color: #a94442;
+}
+
+.alt-success.boxp .alt-cls, .alt-normal.boxp .alt-cls, .alt-info.boxp .alt-cls, .alt-warning.boxp .alt-cls, .alt-failure.boxp .alt-cls {
+    display: block;
+    width: 99%;
+    margin: 40px 20px 20px;
+    text-align: center;
+    padding: 8px 0;
+    height: 22px;
+    position: relative;
+    text-shadow: none;
+    border-radius: 3px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: 15px;
+}
+
+.alt-success.boxp .alt-cls:hover, .alt-normal.boxp .alt-cls:hover, .alt-info.boxp .alt-cls:hover, .alt-warning.boxp .alt-cls:hover, .alt-failure.boxp .alt-cls:hover {
+    box-shadow: 0 0 2px #999;
+}
+
+.alt-success.boxp .alt-cls {
+    background-color: #3c763d;
+}
+
+.alt-normal.boxp .alt-cls {
+    background-color: #666;
+}
+
+.alt-info.boxp .alt-cls {
+    background-color: #1487b5;
+}
+
+.alt-warning.boxp .alt-cls {
+    background-color: #8a6d3b;
+}
+
+.alt-failure.boxp .alt-cls {
+    background-color: #a94442;
+}
+
+.animate-scale-half {
+    -webkit-transition: all .5s;
+    -moz-transition: all .5s;
+    -ms-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    transform: scale(.5);
+}
+
