@@ -2,18 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="dd2beb37-a521-474f-bada-cd71c6c68653" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/Browser-alert.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/Browser-confirm.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/template/Simple-Modal-Box.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/Browser-confirm.html" afterPath="$PROJECT_DIR$/template/Browser-confirm.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/Confirm.html" afterPath="$PROJECT_DIR$/template/Confirm.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/Header.html" afterPath="$PROJECT_DIR$/template/Header.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/Menu.html" afterPath="$PROJECT_DIR$/template/Menu.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/ZR/ZRComponent.css" afterPath="$PROJECT_DIR$/css/ZR/ZRComponent.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/ZR/ZRComponent.js" afterPath="$PROJECT_DIR$/js/ZR/ZRComponent.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/Simple-Modal-Box.html" afterPath="$PROJECT_DIR$/template/Simple-Modal-Box.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/template/ZRHelpDocs.html" afterPath="$PROJECT_DIR$/template/ZRHelpDocs.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/custom/ZRHelpDocs.js" afterPath="$PROJECT_DIR$/js/custom/ZRHelpDocs.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/custom/style.css" afterPath="$PROJECT_DIR$/css/custom/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="ZRHelpDocs.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -37,33 +29,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ZRComponent.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/ZR/ZRComponent.js">
+      <file leaf-file-name="Confirm.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/template/Confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="7774" max-vertical-offset="8760">
-              <caret line="585" column="19" selection-start-line="585" selection-start-column="19" selection-end-line="585" selection-end-column="19" />
-              <folding>
-                <element signature="e#7#143#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ZRHelpDocs.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/custom/ZRHelpDocs.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-1.1111112" vertical-offset="0" max-vertical-offset="2325">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.1985294" vertical-offset="0" max-vertical-offset="7410">
+              <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Simple-Modal-Box.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Simple-Modal-Box.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/Simple-Modal-Box.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7132353" vertical-offset="475" max-vertical-offset="1185">
-              <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1185">
+              <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -72,18 +52,8 @@
       <file leaf-file-name="Browser-confirm.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/Browser-confirm.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-20.083334" vertical-offset="13" max-vertical-offset="720">
-              <caret line="33" column="186" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="186" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Confirm.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/template/Confirm.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.72549" vertical-offset="434" max-vertical-offset="7200">
-              <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="720">
+              <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
               <folding />
             </state>
           </provider>
@@ -112,16 +82,16 @@
         <option value="$PROJECT_DIR$/js/custom/I18n.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/custom/style.css" />
-        <option value="$PROJECT_DIR$/template/Confirm.html" />
         <option value="$PROJECT_DIR$/css/ZR/ZRComponent.css" />
         <option value="$PROJECT_DIR$/template/Browser-alert.html" />
         <option value="$PROJECT_DIR$/template/Header.html" />
         <option value="$PROJECT_DIR$/template/Menu.html" />
-        <option value="$PROJECT_DIR$/template/ZRHelpDocs.html" />
         <option value="$PROJECT_DIR$/js/custom/ZRHelpDocs.js" />
-        <option value="$PROJECT_DIR$/template/Browser-confirm.html" />
         <option value="$PROJECT_DIR$/js/ZR/ZRComponent.js" />
+        <option value="$PROJECT_DIR$/template/ZRHelpDocs.html" />
+        <option value="$PROJECT_DIR$/template/Browser-confirm.html" />
         <option value="$PROJECT_DIR$/template/Simple-Modal-Box.html" />
+        <option value="$PROJECT_DIR$/template/Confirm.html" />
       </list>
     </option>
   </component>
@@ -736,51 +706,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/template/ZRHelpDocs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6336634" vertical-offset="0" max-vertical-offset="1395">
-          <caret line="77" column="40" selection-start-line="77" selection-start-column="40" selection-end-line="77" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/template/Confirm.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.72549" vertical-offset="434" max-vertical-offset="7200">
-          <caret line="45" column="0" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/js/custom/ZRHelpDocs.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.1111112" vertical-offset="0" max-vertical-offset="2325">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/ZR/ZRComponent.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="7774" max-vertical-offset="8760">
-          <caret line="585" column="19" selection-start-line="585" selection-start-column="19" selection-end-line="585" selection-end-column="19" />
+        <state vertical-scroll-proportion="123.92593" vertical-offset="8056" max-vertical-offset="8760">
+          <caret line="321" column="55" selection-start-line="321" selection-start-column="55" selection-end-line="321" selection-end-column="55" />
           <folding>
             <element signature="e#7#143#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/custom/ZRHelpDocs.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.17045455" vertical-offset="150" max-vertical-offset="2325">
+          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/ZRHelpDocs.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.19094767" vertical-offset="0" max-vertical-offset="1395">
+          <caret line="9" column="83" selection-start-line="9" selection-start-column="83" selection-end-line="9" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/template/Browser-confirm.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-20.083334" vertical-offset="13" max-vertical-offset="720">
-          <caret line="33" column="186" selection-start-line="33" selection-start-column="80" selection-end-line="33" selection-end-column="186" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="720">
+          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/template/Simple-Modal-Box.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7132353" vertical-offset="475" max-vertical-offset="1185">
-          <caret line="64" column="0" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="1185">
+          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/template/Confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.1985294" vertical-offset="0" max-vertical-offset="7410">
+          <caret line="9" column="70" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
           <folding />
         </state>
       </provider>
