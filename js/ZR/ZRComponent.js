@@ -24,6 +24,18 @@ var ZRComponent = (function () {
         position: 'middletop'//NO I18N
     };
 
+    ZRComponent.init = function () {
+
+        /*This is Model Box resize monitor*/
+        $(window).resize(function () {
+            if (ZRComponent.resizeMonitor && ZRComponent.popup !== undefined) {
+                if (ZRComponent.popup.offsetTop > 0) {
+                    ZRComponent.makeItMiddle($(window).width(), $(window).height());
+                }
+            }
+        });
+    };
+
     ZRComponent.AlertTypes = {
         "success": {//NO I18N
             "altClass": "alt-success",//NO I18N
@@ -236,7 +248,7 @@ var ZRComponent = (function () {
         var modalId = (args && args.modalId) ? args.modalId : "zrc-modal-box-" + $('.model-box-wrap').length;//NO I18N
         var removeFreeze = (args && args.hasOwnProperty('removeFreeze') && args.removeFreeze === true) ? args.removeFreeze : false;//NO I18N
         var removeDialog = (args && args.hasOwnProperty('removeDialog')) ? args.removeDialog : true;//NO I18N
-        var needFreezeClass = (removeFreeze === true) ? '' : 'modal-freeze';//NO I18N
+        var needFreezeClass = (removeFreeze === true) ? 'no-modal-freeze' : 'modal-freeze';//NO I18N
         var modalTitle = (args && args.title) ? args.title : I18n.getMsg('zr.component.modalbox.alert.title');//NO I18N
         var modalContent = (args && args.content) ? args.content : Utils.createHTML({
             "name": "p",//NO I18N
@@ -314,7 +326,7 @@ var ZRComponent = (function () {
         var modalId = (args && args.modalId) ? args.modalId : "zrc-modal-box-" + $('.model-box-wrap').length;//NO I18N
         var removeFreeze = (args && args.hasOwnProperty('removeFreeze') && args.removeFreeze === true) ? args.removeFreeze : false;//NO I18N
         var removeDialog = (args && args.hasOwnProperty('removeDialog')) ? args.removeDialog : true;//NO I18N
-        var needFreezeClass = (removeFreeze === true) ? '' : 'modal-freeze';
+        var needFreezeClass = (removeFreeze === true) ? 'no-modal-freeze' : 'modal-freeze';
         var modalTitle = (args && args.title) ? args.title : I18n.getMsg('zr.component.modalbox.confirm.title');
         var modalContent = (args && args.content) ? args.content : Utils.createHTML({
             "name": "p",//NO I18N
@@ -423,7 +435,7 @@ var ZRComponent = (function () {
         var boldMsg = (params && params.hasOwnProperty('boldMsg')) ? params.boldMsg : (typeObj && typeObj.msg) ? typeObj.message : "";
         var altId = (params && params.hasOwnProperty('baseid')) ? params.baseid : "alert-message";//No I18N
         var cancelFun = (params && params.hasOwnProperty('cancelFun')) ? params.cancelFun : ZRComponent.defaultCloseFun;//No I18N
-        var cancelFunArg = (params && params.hasOwnProperty('cancelFunArg')) ? params.cancelFunArg : "alert-message";//No I18N
+        var cancelFunArg = (params && params.hasOwnProperty('cancelFunArg')) ? params.cancelFunArg : altId;//No I18N
         var display = (params && params.hasOwnProperty('display')) ? params.display : (type.indexOf("-box") != -1) ? "top" : (type.indexOf("-modal") != -1) ? "freeze" : "inline";//No I18N
         var displayId = (params && params.hasOwnProperty('displayId')) ? params.displayId : "";//No I18N
         var timer = (params && params.hasOwnProperty('timer')) ? params.timer : false;//No I18N
@@ -485,15 +497,90 @@ var ZRComponent = (function () {
         }
     };
 
+    ZRComponent.openSimpleModalBox = function (args) {
+        ZRComponent.disableScroll();
+        args = (args && typeof args === 'object') ? args : {};//NO I18N
+
+        ZRComponent.defaultCloseFun = function (ev, target, altId) {//No I18N
+            hide(altId, 'alert-animate');
+            ZRCommonUtil.removeFreeze();
+        };
+
+        var modalClass = (args && args.modalClass) ? 'model-box-wrap zrc-modal-block ' + args.modalClass : ZRComponent.getDefaultModalBoxVal('modalClass');//NO I18N
+        modalClass = modalClass.replace('confirm', '');
+        var modalId = (args && args.modalId) ? args.modalId : "zrc-modal-box-" + $('.model-box-wrap').length;//NO I18N
+        var removeFreeze = (args && args.hasOwnProperty('removeFreeze') && args.removeFreeze === true) ? args.removeFreeze : false;//NO I18N
+        var removeDialog = (args && args.hasOwnProperty('removeDialog')) ? args.removeDialog : true;//NO I18N
+        var needFreezeClass = (removeFreeze === true) ? 'no-modal-freeze' : 'modal-freeze';
+        var title = (args && args.hasOwnProperty('title')) ? args.title : "Sample Modal";//No I18N
+        var subTitle = (args && args.hasOwnProperty('subTitle')) ? args.subTitle : "Lorem ipsum dolor sit amet, consectetur adipiscing elit.";//No I18N
+        var modalContent = (args && args.content) ? args.content : Utils.createHTML({
+            "name": "p",//NO I18N
+            "html": I18n.getMsg('zr.component.modalbox.alert.defaultcontent')//NO I18N
+        });
+        var btnAlignClass = (args && args.btnAlignClass) ? ($.inArray(args.btnAlignClass, btnAlignClassArray) !== -1) ? args.btnAlignClass : ZRComponent.getDefaultModalBoxVal('btnAlign') : ZRComponent.getDefaultModalBoxVal('btnAlign');//NO I18N
+        btnAlignClass = ZRComponent.getDefaultModalBoxVal('btnClass') + btnAlignClass;//NO I18N
+
+        var saveBtnLabel = (args && args.saveBtnLabel) ? args.saveBtnLabel : I18n.getMsg('crm.button.ok');
+        var saveBtnClass = (args && args.saveBtnClass) ? ZRComponent.getButtonClass(args.saveBtnClass) : ZRComponent.getBtnClass(4);
+        var saveBtnFun = (args && args.saveBtnFun) ? args.saveBtnFun : ZRComponent.defaultButtonClick;
+        var saveBtnArg = (args && args.saveBtnArg) ? args.saveBtnArg : "Hi there..!!";//NO I18N
+
+        var cancelBtnLabel = (args && args.cancelBtnLabel) ? args.cancelBtnLabel : I18n.getMsg('zr.component.modalbox.button.lable.cancel');
+        var cancelBtnClass = (args && args.cancelBtnClass) ? ZRComponent.getButtonClass(args.cancelBtnClass) : ZRComponent.getBtnClass(1);
+        var cancelBtnFun = (args && args.cancelBtnFun) ? args.cancelBtnFun : ZRComponent.closeFunction;
+        var cancelBtnArg = (args && args.cancelBtnArg) ? args.cancelBtnArg : [modalId];
+
+        args.position = (args && args.position && $.inArray(args.position, positionArray) != -1) ? args.position : ZRComponent.getDefaultModalBoxVal('position');
+        args.modalId = modalId;
+
+        var createElem = Utils.createHTML({
+            "name": "div",//NO I18N
+            "attr": {"class": needFreezeClass, "data-removefreeze": removeFreeze, "data-removedialog": removeDialog},//NO I18N
+            "child"://No I18N
+                [{
+                    "name": "div",//NO I18N
+                    "attr": {"class": modalClass, "id": modalId},//NO I18N
+                    "child": [{//NO I18N
+                        "name": "a",//NO I18N
+                        "attr": {"href": "javascript:void(0)", "class": "zrc-close-modal"},//NO I18N
+                        "html": "&times;",//NO I18N
+                        "events": [{"name": "click", "fn": cancelBtnFun, "args": [modalId]}]//NO I18N
+                    },//No I18N
+                        {
+                            "name": "h2", "attr": {"class": "til"}, "html": title, "child": [{
+                            "name": "span", "html": subTitle
+                        }]
+                        },//NO I18N
+                        {"name": "div", "attr": {"class": "zrc-modal-content"}, "html": modalContent},//NO I18N
+                        {
+                            "name": "div", "attr": {"class": btnAlignClass}, "child"://No I18N
+                            [{
+                                "name": "input",//NO I18N
+                                "attr": { //NO I18N
+                                    "type": "button",//NO I18N
+                                    "class": saveBtnClass,//NO I18N
+                                    "value": saveBtnLabel //NO I18N
+                                },
+                                "events": [{"name": "click", "fn": saveBtnFun, "args": saveBtnArg}]//NO I18N
+                            },
+                                {
+                                    "name": "input",//NO I18N
+                                    "attr": {//NO I18N
+                                        "type": "button",//NO I18N
+                                        "class": cancelBtnClass + " marL15",//NO I18N
+                                        "value": cancelBtnLabel//NO I18N
+                                    },
+                                    "events": [{"name": "click", "fn": cancelBtnFun, "args": cancelBtnArg}]//NO I18N
+                                }]
+                        }]
+                }]
+        });
+
+        ZRComponent.generateModalBox(args, createElem, 'alert');//NO I18N
+    };
+
     return ZRComponent;
 })();
 
-
-/*This is Model Box resize monitor*/
-$(window).resize(function () {
-    if (ZRComponent.resizeMonitor && ZRComponent.popup !== undefined) {
-        if (ZRComponent.popup.offsetTop > 0) {
-            ZRComponent.makeItMiddle($(window).width(), $(window).height());
-        }
-    }
-});
+ZRComponent.init();

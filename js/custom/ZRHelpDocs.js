@@ -11,6 +11,30 @@ var ZRHelpDocs = angular.module("ZRHelpDocs", ["ngRoute", "ngSanitize"]);
 
 ZRHelpDocs.server = {};
 
+/*Routing is handled here*/
+ZRHelpDocs.config(function ($routeProvider) {
+
+    $routeProvider
+        .when("/", {
+            templateUrl: "template/ZRHelpDocs.html",
+            controller: "FormGenMainCtrl"
+        }).when("/modal-box/confirm", {
+            templateUrl: "template/Confirm.html",
+            controller: "FormGenMainCtrl"
+        }).when("/modal-box", {
+            templateUrl: "template/Modal-box.html",
+            controller: "FormGenMainCtrl"
+        }).when("/modal-box/browser-confirm", {
+            templateUrl: "template/Browser-confirm.html",
+            controller: "FormGenMainCtrl"
+        }).when("/modal-box/simple", {
+            templateUrl: "template/Simple-Modal-Box.html",
+            controller: "FormGenMainCtrl"
+        });
+
+
+});
+
 ZRHelpDocs.serverConfig = {
     mine: {
         host: "http://localhost",
@@ -26,7 +50,7 @@ ZRHelpDocs.serverConfig = {
     }
 };
 
-ZRHelpDocs.server.local = "mine";
+ZRHelpDocs.server.local = "local";
 
 ZRHelpDocs.getMyHost = function () {
 
@@ -52,27 +76,6 @@ ZRHelpDocs.getMyHost = function () {
 ZRHelpDocs.getBasePath = function () {
     return ZRHelpDocs.getMyHost() + "/ZRHelpDocs/#/";
 };
-
-/*Routing is handled here*/
-ZRHelpDocs.config(function ($routeProvider) {
-
-    $routeProvider
-        .when("/", {
-            templateUrl: "template/ZRHelpDocs.html",
-            controller: "FormGenMainCtrl"
-        }).when("/modal-box/confirm", {
-            templateUrl: "template/Confirm.html",
-            controller: "FormGenMainCtrl"
-        }).when("/modal-box", {
-            templateUrl: "template/Modal-box.html",
-            controller: "FormGenMainCtrl"
-        }).when("/alert-box", {
-            templateUrl: "template/Alert-box.html",
-            controller: "FormGenMainCtrl"
-        });
-
-
-});
 
 ZRHelpDocs.changeHash = function (hash) {
     window.location.hash = (hash) ? "#/" + hash : window.location.hash
@@ -136,6 +139,10 @@ ZRHelpDocs.controller("FormGenMainCtrl", ["$scope", "$location", "$log", "$http"
             ZRHelp.makeItMiddle($(this).find('h4'), $(this).width(), $(this).height());
             $(this).find('.bg-trans').stop().animate({top: "-400"}, ZRHelp.AnimationDuration);
             $(this).find('h4').fadeOut('slow');
+        });
+
+        $('.try').on('click', function () {
+            eval($(this).data('callback'));
         });
     };
 

@@ -1,0 +1,74 @@
+<section class="content-wrap row ng-scope">
+    <section class="rmenu col-md-12 np">
+
+        <!--Component Header Section-->
+        <article class="rmenu-header-wrap">
+            <div class="rmenu-header">
+                <div class="comp-details fl">
+                    <h3 class="m0">Simple Modal Box</h3>
+
+                    <p>In this page you can have quick overview and some features of Simple Modal Box component.</p>
+                </div>
+            </div>
+        </article>
+
+
+        <section class="article-des">
+
+            <!--Component Overview Section-->
+            <article class="overview-wrap">
+                <div class="overview">
+                    <div class="overview-head">
+                        <h3 class="m0">About Browser Confirm Box</h3>
+                    </div>
+                    <div class="overview-content">
+                        <p>It's just a modal box.You can customize as your wish. You can make it as a simple HTML
+                            form.</p>
+
+                        <pre id="htmlOutput" class="html prettyprint">The <span class="typ">ZRComponent</span><span
+                                class="pun">.</span><span class="pln">openSimpleModalBox</span><span
+                                class="pun">()</span> method displays a default confirm box that is similar to browser confirm box.</pre>
+
+                        <pre id="htmlOutput"
+                             class="html prettyprint">To generate HTML form you can use the method  <span class="typ">Utils</span><span
+                                class="pun">.</span><span class="pln">createHTML</span><span
+                                class="pun">()</span>.Pass this as parameter to <strong>modalContent </strong>object.</pre>
+
+                        <div class="attrib">
+                            <span class="label label-primary">modalContent</span>
+
+                            <p class="pt10">The <strong>modalContent</strong> attribute is used to set the content or
+                                any HTMl string into to Modal.</p>
+                            <pre id="htmlOutput" class="html prettyprint"><span class="typ">ZRComponent</span><span
+                       class="pun">.</span><span class="pln">openSimpleModalBox</span><span class="pun">(</span><span
+                       class="pln"> </span><span class="pun">{</span><span class="pln">
+    modalContent </span><span class="pun">:</span><span class="pln"> </span><span class="str">'
+        &lt;div class="overview-head"&gt;
+        &lt;h3 class="m0"&gt;
+        About Browser Confirm Box&lt;/h3
+        &lt;/div&gt;'</span><span class="pln">
+</span><span class="pun">}</span><span class="pln"> </span><span class="pun">);</span></pre>
+
+                            <pre id="htmlOutput" class="html prettyprint"><span class="kwd">var</span><span class="pln"> input </span><span class="pun">=</span><span class="pln"> </span><span class="typ">Utils</span><span class="pun">.</span><span class="pln">createHTML</span><span class="pun">({</span><span class="pln">
+</span><span class="str">   "name"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"input"</span><span class="pun">,</span><span class="com">//NO I18N</span><span class="pln">
+</span><span class="str">   "attr"</span><span class="pun">:</span><span class="pln"> </span><span class="pun">{</span><span class="pln"> </span><span class="com">//NO I18N</span><span class="pln">
+</span><span class="str">   "type"</span><span class="pun">:</span><span class="pln"> </span><span class="str">"button"</span><span class="pun">,</span><span class="com">//NO I18N</span><span class="pln">
+</span><span class="str">   "class"</span><span class="pun">:</span><span class="pln"> "btn-primary"</span><span class="pun">,</span><span class="com">//NO I18N</span><span class="pln">
+</span><span class="str">   "value"</span><span class="pun">:</span><span class="pln"> "Save" </span><span class="com">//NO I18N</span><span class="pln">
+</span><span class="pun">   }</span><span class="pln">
+</span><span class="pun">});</span><span class="pln">
+</span>
+<span class="typ">ZRComponent</span><span class="pun">.</span><span class="pln">openSimpleModalBox</span><span class="pun">(</span><span class="pln"> </span><span class="pun">{</span><span class="pln">
+content </span><span class="pun">:</span><span class="pln"> input
+</span><span class="pun">}</span><span class="pln"> </span><span class="pun">);</span>
+
+<span class="label label-danger try" data-callback='var input=Utils.createHTML({name:"input",attr:{type:"button","class":"btn-primary",value:"Save"}});ZRComponent.openSimpleModalBox({content:input});'>Try It</span></p></pre>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <!--Component Overview Section End-->
+        </section>
+
+    </section>
+</section>

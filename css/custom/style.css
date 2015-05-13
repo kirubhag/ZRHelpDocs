@@ -295,8 +295,9 @@ pre {
     margin-bottom: 10px !important;
 }
 
-.attrib > .label {
+span.label {
     font-size: 100%;
+    cursor: pointer;
 }
 
 .attrib {

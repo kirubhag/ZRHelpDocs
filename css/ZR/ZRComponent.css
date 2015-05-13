@@ -23,6 +23,17 @@
     z-index: 10000;
 }
 
+.no-modal-freeze {
+    position: fixed;
+    display: none;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 10000;
+}
+
 .zrc-freeze {
     background: none repeat scroll 0 0 rgba(167, 184, 192, 0.9);
     left: 0;
